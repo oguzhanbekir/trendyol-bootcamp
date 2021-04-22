@@ -4,6 +4,7 @@
 
 import UIKit
 
+
 func findLargestPrimeFactor(number: Int) -> Int {
     var result = 2
     var number2 = number
