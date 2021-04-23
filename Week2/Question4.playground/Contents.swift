@@ -6,7 +6,6 @@ import UIKit
 
 var result : Int = 0
 
-
 func findPalindromeNumber() {
     for number1 in stride (from: 999, to: 100, by: -1){
         for number2 in stride(from: 999, to: 100, by: -1) {
