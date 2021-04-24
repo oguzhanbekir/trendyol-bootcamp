@@ -1,5 +1,6 @@
 //Elimizde uzun bir cümle olsun, Bazı kelimeler tekrar edecek bir cümle düşünün. İstediğimiz ise, hangi kelimeden kaç tane kullanıldığını bulmanız. string = "merhaba nasılsınız . iyiyim siz nasılsınız . bende iyiyim. "
 
+
 import UIKit
 
 let text = "merhaba nasılsınız . iyiyim siz nasılsınız . bende iyiyim."
