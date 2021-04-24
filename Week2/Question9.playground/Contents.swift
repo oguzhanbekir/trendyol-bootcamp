@@ -4,7 +4,7 @@ import UIKit
 //Early exist process from the scope
 //Require scope existing like return, throw etc.
 //Create a new variable that can be accessed outside the scope.
-
+//*******************
 //if let
 //Can not access outside the scope.
 //no need for return statement. But we can write
