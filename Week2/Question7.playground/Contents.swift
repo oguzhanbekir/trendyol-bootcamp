@@ -2,6 +2,7 @@
 //Örnek string: "aaba kouq bux" Tekrar sayısı 2 verildiğinde : a,b,u silinmeli ve ekrana "koq x" yazmalı Tekrar sayısı 3 verildiğinde : a silinmeli ve ekrana "b kouq bux" tekrar sayısı 4 verildiğinde : hiç bir harf silinmemeli aynı stringi yazmalı
 //String ve tekrar sayısını parametre olarak alsın
 
+
 import UIKit
 
 var characterCount = [String: Int]()
