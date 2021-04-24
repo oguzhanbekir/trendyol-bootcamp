@@ -1,5 +1,7 @@
 import UIKit
 
+
+//Guard Let and If Let Difference
 //Guard let
 //Early exist process from the scope
 //Require scope existing like return, throw etc.
