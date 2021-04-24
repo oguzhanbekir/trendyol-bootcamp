@@ -4,6 +4,7 @@
 //To find the Greatest Common Divisor (GCD):
 //GCD(a, b) = GCD(b, a % b)
 
+
 import UIKit
 
 var total = 1
