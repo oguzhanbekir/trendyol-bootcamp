@@ -1,5 +1,4 @@
-import UIKit
-
+import Foundation
 
 //Guard Let and If Let Difference
 //Guard let
