@@ -3,43 +3,37 @@
 
 import Foundation
 
-
-func isPrimeNumber(number: Int) -> Bool {
-   guard number > 1 else {
-     return false
-   }
-   
-   for i in 2..<number {
-     if number % i == 0 {
-       return false
+extension Int {
+    public var isPrimeNumber: Bool {
+       guard self > 1 else {
+         return false
+       }
+       
+       for i in 2..<self {
+         if self % i == 0 {
+           return false
+         }
+       }
+       return true
      }
-   }
-   return true
 }
 
 func display10001stPrimeNumber() {
     var count = 0
-    var n = 1
+    var primeNumber = 1
     var result = 0
-    while n != 0
-    {
-        if count < 10001
-        {
-            if (isPrimeNumber(number: n))
-            {
+    while primeNumber != 0 {
+        if count < 10001 {
+            if (primeNumber.isPrimeNumber) {
                 count += 1;
-                result = n;
+                result = primeNumber;
             }
-        }
-        else
-        {
+        } else {
             break;
         }
-        n += 1
+        primeNumber += 1
     }
     print(result)
 }
-
-
 
 display10001stPrimeNumber()
