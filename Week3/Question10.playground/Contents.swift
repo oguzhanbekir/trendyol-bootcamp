@@ -18,12 +18,12 @@ extension Int {
      }
 }
 
-func display10001stPrimeNumber() {
+func findOrderPrimeNumber(orderOfNumber: Int) {
     var count = 0
     var primeNumber = 1
     var result = 0
     while primeNumber != 0 {
-        if count < 10001 {
+        if count < orderOfNumber {
             if (primeNumber.isPrimeNumber) {
                 count += 1;
                 result = primeNumber;
@@ -36,4 +36,4 @@ func display10001stPrimeNumber() {
     print(result)
 }
 
-display10001stPrimeNumber()
+findOrderPrimeNumber(orderOfNumber: 10001)
