@@ -13,6 +13,7 @@
 		C47A2B74264318620045CBE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47A2B72264318620045CBE6 /* Main.storyboard */; };
 		C47A2B76264318650045CBE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C47A2B75264318650045CBE6 /* Assets.xcassets */; };
 		C47A2B79264318650045CBE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C47A2B77264318650045CBE6 /* LaunchScreen.storyboard */; };
+		C47A2B8226431A460045CBE6 /* NotificationListenerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47A2B8126431A460045CBE6 /* NotificationListenerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C47A2B75264318650045CBE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C47A2B78264318650045CBE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C47A2B7A264318650045CBE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C47A2B8126431A460045CBE6 /* NotificationListenerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListenerVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				C47A2B75264318650045CBE6 /* Assets.xcassets */,
 				C47A2B77264318650045CBE6 /* LaunchScreen.storyboard */,
 				C47A2B7A264318650045CBE6 /* Info.plist */,
+				C47A2B8126431A460045CBE6 /* NotificationListenerVC.swift */,
 			);
 			path = NotificationListener;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C47A2B71264318620045CBE6 /* ViewController.swift in Sources */,
+				C47A2B8226431A460045CBE6 /* NotificationListenerVC.swift in Sources */,
 				C47A2B6D264318620045CBE6 /* AppDelegate.swift in Sources */,
 				C47A2B6F264318620045CBE6 /* SceneDelegate.swift in Sources */,
 			);
