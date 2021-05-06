@@ -23,16 +23,15 @@ class VerifyAddressVC: UIViewController {
     }
     
     
-    
 
     @IBAction func saveButtonTapped(_ sender: Any) {
-        if titleTF.text != "" && addressTextField.text != "" {
+        if let text = titleTF.text, !text.isEmpty {
+            
             dictAddress[titleTF.text!] = addressTextField.text
-            
             UserDefaults.standard.set(dictAddress, forKey: "dictAddress")
-            
             navigationController?.popToRootViewController(animated: true)
         }
+        
     }
     
 }

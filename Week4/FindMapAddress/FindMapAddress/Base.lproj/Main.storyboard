@@ -11,7 +11,7 @@
         <!--Adres Bilgilerim-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FindMapAddress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addressViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="FindMapAddress" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,7 +65,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ojk-aK-AVR" id="O5m-lB-Zhj"/>
-                        <segue destination="VcR-Xd-Nvd" kind="show" identifier="toAddNewAddress" id="3xr-Wy-tbm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,13 +74,13 @@
         <!--Adres Ekle-->
         <scene sceneID="XER-hn-QG4">
             <objects>
-                <viewController id="VcR-Xd-Nvd" customClass="SelectLocationOnMapVC" customModule="FindMapAddress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectLocationViewController" id="VcR-Xd-Nvd" customClass="SelectLocationOnMapVC" customModule="FindMapAddress" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rvk-Je-lXV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="w5x-KT-2Ks">
-                                <rect key="frame" x="0.0" y="88" width="414" height="729"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="773"/>
                                 <connections>
                                     <outlet property="delegate" destination="VcR-Xd-Nvd" id="Qoq-Yr-xuo"/>
                                 </connections>
@@ -170,7 +169,6 @@
                     <connections>
                         <outlet property="addressLabel" destination="NMy-gW-Pxn" id="p5F-ef-hyg"/>
                         <outlet property="mapView" destination="w5x-KT-2Ks" id="q8A-uK-Lkj"/>
-                        <segue destination="jhH-Kl-1w7" kind="show" identifier="toVerifyYourAddress" id="e8U-Pd-npD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hoz-jj-zds" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -180,13 +178,13 @@
         <!--Adresi Bilgilerini Kaydet-->
         <scene sceneID="iC2-5T-MDl">
             <objects>
-                <viewController id="jhH-Kl-1w7" customClass="VerifyAddressVC" customModule="FindMapAddress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="verifyAddressViewController" id="jhH-Kl-1w7" customClass="VerifyAddressVC" customModule="FindMapAddress" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X6t-iC-ANh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6RU-Yg-Xis">
-                                <rect key="frame" x="40" y="113" width="334" height="219"/>
+                                <rect key="frame" x="40" y="69" width="334" height="219"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adres Başlığı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3S-7g-jNZ">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="18"/>

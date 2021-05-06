@@ -23,7 +23,9 @@ class ViewController: UIViewController {
     }
     
     @objc func addTapped() {
-        performSegue(withIdentifier: "toAddNewAddress", sender: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let viewController = storyboard.instantiateViewController(identifier: "selectLocationViewController")
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
     

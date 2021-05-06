@@ -9,9 +9,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class SelectLocationOnMapVC: UIViewController {
+final class SelectLocationOnMapVC: UIViewController {
 
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak private var mapView: MKMapView!
     @IBOutlet weak var addressLabel: UILabel!
     
     var locationManager = CLLocationManager()
@@ -101,18 +101,18 @@ class SelectLocationOnMapVC: UIViewController {
         alert.addAction(UIAlertAction(title: "Vazgeç", style: UIAlertAction.Style.cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Evet", style: .default, handler: { action in
             if self.address !=  "" {
-                self.performSegue(withIdentifier: "toVerifyYourAddress", sender: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                
+                let viewController = storyboard.instantiateViewController(identifier: "verifyAddressViewController") as VerifyAddressVC
+                
+                self.navigationController?.pushViewController(viewController, animated: true)
+                viewController.address = self.address
             }
         }))
         self.present(alert, animated: true, completion: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       if (segue.identifier == "toVerifyYourAddress") {
-          let verifyAddressVC = segue.destination as! VerifyAddressVC
-            verifyAddressVC.address = address
-       }
-    }
+  
 }
 
 extension SelectLocationOnMapVC: CLLocationManagerDelegate {
@@ -141,9 +141,7 @@ extension SelectLocationOnMapVC: MKMapViewDelegate {
        let center = getCenterLocation(mapView: mapView)
        let geoCoder = CLGeocoder()
 
-       guard let lastLocation = lastLocation else { return }
-       
-       guard center.distance(from: lastLocation) > 30 else { return }
+       guard let lastLocation = lastLocation, center.distance(from: lastLocation) > 30 else { return }
        
        self.lastLocation = center
        
